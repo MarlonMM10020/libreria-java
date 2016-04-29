@@ -39,6 +39,17 @@ public class dbHelper {
 		
 	}
 	
+	public void ejecutarUpdateInsert(String sql){
+		try{
+			sentencia=conexion.createStatement();
+			sentencia.execute(sql);
+			
+		}catch(SQLException e){
+			System.out.println("Error al ejecutar consulta "+e.getMessage());
+		}
+		
+	}
+	
 	public void cerrarConexion(){
 		try{
 			if(!conexion.isClosed()){

@@ -1,9 +1,11 @@
 package Dominio;
+import Helper.dbHelper;
 
 public class Libro {
 	private int idLibro;
 	private String nombre;
 	private int idCategoria;
+	private dbHelper helper=new dbHelper();
 		
 	public Libro(int idLibro, String nombre, int idCategoria) {
 		super();
@@ -30,7 +32,10 @@ public class Libro {
 		this.idCategoria = idCategoria;
 	}
 	
-	
-	
-	
+	public void guardarLibro(){
+		helper.abrirConexion();
+		String sql="insert into libro(idlibro,nombre,idcategoria) values('"+getIdLibro()+"','"+getNombre()+"','"+getIdCategoria()+"')";
+		helper.ejecutarUpdateInsert(sql);
+	}
+		
 }
