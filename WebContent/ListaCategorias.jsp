@@ -36,7 +36,7 @@
 	</nav>
 	
 	<div class="container">
-		<h2>Lista de categorías</h2>
+		<h3 class="center">Lista de categorías</h3>
 		<a href=AgregarCategoriaForm.jsp class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add</i></a>
 		<br>
 		<table class="striped highlight">
