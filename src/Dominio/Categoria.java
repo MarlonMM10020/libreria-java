@@ -17,6 +17,11 @@ public class Categoria {
 		this.idCategoria = idCategoria;
 		this.nombre = nombre;
 	}
+	
+	public Categoria(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
 
 	public int getIdCategoria() {
 		return idCategoria;
@@ -36,7 +41,7 @@ public class Categoria {
 	
 	public void guardarCategoria(){
 		helper.abrirConexion();
-		String sql="insert into categoria(idCategoria,nombre) values('"+getIdCategoria()+"','"+getNombre()+"')";
+		String sql="insert into categoria(nombre) values('"+getNombre()+"')";
 		helper.ejecutarUpdateInsert(sql);
 	}
 	
